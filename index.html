@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Product</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="./img/logo.png" class="logo">
+            <div class="nav-icons">
+                <img src="./img/search.png">
+                <img src="./img/cart.png">
+                <img src="./img/menu.png">
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-1">
+                <h1>NIKE <br> SPORTS AIR</h1>
+                <p>The Nike Air Zoom Vomero 15 Is Back Upfated Cushioning <br> And A Tough Outsole For Traction.</p>
+                <h2>$150</h2>
+                <button type="button">Add To Cart</button>
+            </div>
+            <div class="col-2" id="bgcolor">
+                <div class="feature-img">
+                    <img src="./img/nike.png" class="img">
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img" onclick="changeBgcolor('#b9c8ff'); imageSlider('./img/nike-b.png')"><img src="./img/nike-b.png"></div>
+                    <div class="small-img" onclick="changeBgcolor('#91ffdd'); imageSlider('./img/nike-g.png')"><img src="./img/nike-g.png"></div>
+                    <div class="small-img" onclick="changeBgcolor('#ff6767'); imageSlider('./img/nike.png')"><img src="./img/nike.png"></div>
+                    <div class="small-img" onclick="changeBgcolor('#9dff90'); imageSlider('./img/nike-s.png')"><img src="./img/nike-s.png"></div>
+                </div>
+                <h2>NIKE</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function imageSlider(anything){
+            document.querySelector(".img").src = anything;
+        }
+        function changeBgcolor(color){
+            const bg = document.getElementById("bgcolor");
+            bg.style.background = color;
+        }
+    </script>
+</body>
+</html>
